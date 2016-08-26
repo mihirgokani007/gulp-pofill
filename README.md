@@ -64,7 +64,8 @@ gulp.task('translations', function () {
 ```
 
 But in many other cases, you want to fillup the translation strings with the
-same strings as translations (for example, when)
+same strings as translations:
+
 
 ```js
 var gulp = require('gulp');
@@ -86,4 +87,14 @@ gulp.task('translations', function () {
         .pipe(gulp.dest('dist/translations/'));
 });
 ```
+
+This can be useful when verifying translations in 
+[angular-translate](https://angular-translate.github.io) 
+using `useMissingTranslationHandler`.
+
+By the way, due to its async nature it can also be used to auto-fill 
+translations using online translation APIs.
+
+Checkout my `gulp-pofill-yandex` plugin for dynamically fetching
+translations from yandex - a free translation service.
 
