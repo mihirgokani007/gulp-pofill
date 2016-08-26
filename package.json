@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "Mihir Gokani",
+    "email": "mihirgokani007@yahoo.co.in",
+    "url": "http://mihirgokani.in/"
+  },
+  "bugs": {
+    "url": "https://github.com/mihirgokani007/gulp-pofill/issues"
+  },
+  "dependencies": {
+    "pofile": "^1.0.2",
+    "through2": "^2.0.1",
+    "gulp-util": "^3.0.7"
+  },
+  "description": "Transform and manipulate translations on the way!",
+  "devDependencies": {},
+  "directories": {},
+  "engines": {
+    "node": ">=0.10"
+  },
+  "keywords": [
+    "gulpplugin",
+    "pofile",
+    "gettext",
+    "translation",
+    "transform",
+    "angular"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/mihirgokani007/gulp-pofill#readme",
+  "license": "MIT",
+  "name": "gulp-pofill",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirgokani007/gulp-pofill.git"
+  },
+  "scripts": {},
+  "version": "1.0.0"
+}
