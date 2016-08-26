@@ -5,7 +5,7 @@
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/gulp-pofill)
+Install with [npm][1]
 
 ```sh
 npm install --save-dev gulp-pofill
@@ -33,7 +33,7 @@ gulp.task('translations', function () {
             },
             items: function(item) {
                 // manipulate item or return a new one
-                // item is instance of [PO.Item](https://github.com/rubenv/pofile#the-poitem-class)
+                // item is instance of [PO.Item][2]
                 return item;
                 // Or a promise which resolves to `item`
             }
@@ -78,7 +78,10 @@ gulp.task('translations', function () {
             items: function(item) {
                 // If msgstr is empty, use identity translation
                 if (!item.msgstr.length) {
-                    item.msgstr.push(item.msgid);
+                  item.msgstr = [''];
+                }
+                if (!item.msgstr[0]) {
+                    item.msgstr[0] = item.msgid;
                 }
                 return item;
             }
@@ -89,7 +92,7 @@ gulp.task('translations', function () {
 ```
 
 This can be useful when verifying translations in 
-[angular-translate](https://angular-translate.github.io) 
+[angular-translate][3] 
 using `useMissingTranslationHandler`.
 
 By the way, due to its async nature it can also be used to auto-fill 
@@ -97,4 +100,30 @@ translations using online translation APIs.
 
 Checkout my `gulp-pofill-yandex` plugin for dynamically fetching
 translations from yandex - a free translation service.
+
+
+# End Matter
+
+## Afterword
+
+Well, I created this library as a building block for dynamically 
+fetching missing translations from a webservice. However, this library
+is written in a way that it can be used with any other sync / async
+operations for filling up missing translations or even transforming
+existing translations.
+
+## Author
+
+[Mihir Gokani][0]
+
+## License
+
+Licensed under MIT.
+
+
+[0]: https://github.com/mihirgokani007
+[1]: https://npmjs.org/package/gulp-pofill
+[2]: https://github.com/rubenv/pofile#the-poitem-class
+[3]: https://angular-translate.github.io
+
 
