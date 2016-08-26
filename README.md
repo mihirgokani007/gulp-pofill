@@ -99,7 +99,7 @@ By the way, due to its async nature it can also be used to auto-fill
 translations using online translation APIs.
 
 Checkout my `gulp-pofill-yandex` plugin for dynamically fetching
-translations from yandex - a free translation service.
+translations from [yandex][4] - a free translation service.
 
 
 # End Matter
@@ -125,5 +125,6 @@ Licensed under MIT.
 [1]: https://npmjs.org/package/gulp-pofill
 [2]: https://github.com/rubenv/pofile#the-poitem-class
 [3]: https://angular-translate.github.io
+[4]: https://tech.yandex.com/translate
 
 
